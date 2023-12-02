@@ -18,6 +18,7 @@
   font-weight: 700;
   color: white;
   margin-left: 12px;
+  text-decoration: none;
 }
 
 .menu {
@@ -144,12 +145,14 @@
 }
 
 .menu-sidebar {
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
   width: 0;
   height: 100vh;
   background: #202020;
+  padding-top: 10vh;
   transition: width 0.6s ease;
 }
 
@@ -157,16 +160,24 @@
   z-index: auto;
   width: 30vw;
   height: 100vh;
-  padding-top: 10vh;
 }
 
-.menu-sidebar.open a {
+.menu-sidebar a {
   display: block;
   text-decoration: none;
   padding-top: 5vh;
   padding-left: 3vw;
   font-size: 1.6em;
   color: white;
+  transition: text-shadow 1s ease;
+}
+
+.menu-sidebar a:hover {
+  text-shadow: 0px 0px 20px white;
+}
+
+body.open:not(.menu-sidebar) {
+  filter: brightness(50%);
 }
 
 @media (max-width: 53rem) {
@@ -175,6 +186,10 @@
   }
 
   .menu-btn {
+    display: block;
+  }
+
+  .menu-sidebar {
     display: block;
   }
 }
