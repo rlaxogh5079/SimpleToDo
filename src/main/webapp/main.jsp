@@ -3,9 +3,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Insert title here</title>
+    <title>Simple To Do</title>
   </head>
   <body>
-  
+    <jsp:include page="components/header.jsp"/>
   </body>
 </html>
