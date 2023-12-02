@@ -33,6 +33,7 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#">Blog</a>
+            <a href="#">Login</a>
         </div>
     </nav>
     <script src="resources/scripts/header.js"></script>
