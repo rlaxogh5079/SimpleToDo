@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+.login-container {
+	width: 100vw;
+	height: calc(100% - 90px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-box {
+	width: 500px;
+	height: 450px;
+	background: transparent;
+	border: 0.1px solid #0aa5ff;
+	transition: box-shadow 0.6s ease;
+}
+
+.login-box:hover {
+	box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 0.3rem #0aa5ff, 0 0
+		0.3rem #0aa5ff, 0 0 1.2rem #0aa5ff, inset 0 0 0.5rem #0aa5ff;
+}
+
+.login-box:focus-within {
+	box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 1.3rem #0aa5ff, 0 0 1rem
+		#0aa5ff, 0 0 2rem #0aa5ff, inset 0 0 3rem #0aa5ff;
+}
+
+.login-header {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 15%;
+	justify-content: center;
+	margin-bottom: 10%;
+}
+
+.login-header>div {
+	width: 30%;
+	text-align: center;
+	font-size: 3.0em;
+	background: white;
+	color: black;
+	border-radius: 0 0 20px 20px;
+	user-select: none;
+}
+
+.login-input-box {
+	width: 100%;
+	height: 75%;
+}
+
+.input-wrapper {
+	display: flex;
+	height: 7vh;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	user-select: none;
+	margin-bottom: 5%;
+}
+
+.input-wrapper>input {
+	font-size: 1em;
+	color: white;
+	padding: 1rem;
+	width: 60%;
+	border-radius: 10px;
+	border: 1px solid #9E9E9E;
+	outline: none; 
+	transition : box-shadow 0.2s ease, border 0.2s ease;
+	background-color: transparent;
+}
+
+.input-wrapper>input:focus {
+	border: 1px solid #0aa5ff;
+	box-shadow: 0 0 10px #0aa5ff;
+}
+
+.input-wrapper>input:is(:focus, :valid) ~ label {
+	transform: translateY(-140%) scale(0.8);
+	color: #0aa5ff;
+}
+
+.input-wrapper>label {
+	position: absolute;
+	left: 22%;
+	color: #8f8f8f;
+	pointer-events: none;
+	transition: transform 0.2s ease;
+	background: #202020;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 5vh;
+	margin-top: 5%;
+}
+
+.button-wrapper > button {
+	width: 20%;
+	height: 5vh;	
+	border: 0;
+	outline: none;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 12px 22px;
+	background-color: transparent;
+	color: #999999;
+	border-radius: 10px;
+	border: 2px solid #0aa5ff;
+	transition: background-color 0.3s ease;
+}
+
+.button-wrapper > button:hover {
+  background-color: #0aa5ff;
+  color: white;
+}
+
+.login-footer {
+	font-size: 0.8em;
+	margin-top: 2vh;
+	text-align: center;
+	color: #535353;
+}
+
+.login-footer > a {
+	color: #0990DD;
+	text-decoration: underline;
+	cursor: pointer;
+}

@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="resources/styles/header.css">
-    <link rel="stylesheet" href="resources/styles/root.css">
+    <link rel="stylesheet" href="../resources/styles/header.css">
+    <link rel="stylesheet" href="../resources/styles/root.css">
   </head>
   <body>
     <nav class="navbar">
@@ -36,6 +36,6 @@
             <a href="#">Login</a>
         </div>
     </nav>
-    <script src="resources/scripts/header.js"></script>
+    <script src="../resources/scripts/header.js"></script>
   </body>
 </html>
