@@ -33,6 +33,16 @@ body {
 	margin-bottom: 5%;
 }
 
+.input-wrapper-half {
+	display: inline-flex;
+	justify-content: start;
+	width: 30%;
+}
+
+.input-wrapper-half > label {
+	left: 5% !important;
+}
+
 .input-wrapper>input {
 	font-size: 1em;
 	color: white;
