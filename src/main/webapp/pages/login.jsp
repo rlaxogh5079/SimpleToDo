@@ -4,7 +4,7 @@
     <head>
     <meta charset="UTF-8">
     <title>Simple To Do</title>
-    <link rel="stylesheet" href="../resources/styles/sign.css" />
+    <link rel="stylesheet" href="../resources/styles/login.css" />
 </head>
 <body>
     <jsp:include page="../components/header.jsp" />
@@ -14,13 +14,13 @@
                 <div>Login</div>
             </div>
 
-            <form class="login-input-box">
+            <form class="login-input-box" action="../requester/login.jsp" method="POST">
                 <div class="input-wrapper">
-                    <input id="userID" required /> <label for="userID">ID</label>
+                    <input id="userID" required name="userID"/> <label for="userID">ID</label>
                 </div>
 
                 <div class="input-wrapper">
-                    <input id="userPWD" required type="password"/> <label for="userPWD">PWD</label>
+                    <input id="userPWD" required type="password" name="userPWD"/> <label for="userPWD">PWD</label>
                 </div>
 
                 <div class="button-wrapper">
@@ -28,10 +28,11 @@
                 </div>
 
                 <div class="login-footer">
-                    Don't have an account? &nbsp; <a>Create your account</a>
+                    Don't have an account? &nbsp; <a href="signup.jsp">Create your account</a>
                 </div>
             </form>
         </div>
     </div>
+    <script src="../resources/scripts/login.js"></script>
 </body>
 </html>
