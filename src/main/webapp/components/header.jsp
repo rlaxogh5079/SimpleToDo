@@ -20,13 +20,33 @@
                 <a href="#">Contact</a>
                 <a href="#">Blog</a>
             </div>
-            <button class="log-in">Log In</button>
+            <%
+                if (request.getSession().getAttribute("userID") == null) {
+            %>  
+            <a href="../pages/login.jsp">
+                <button class="log-in">Log in</button>
+            </a>
+            <%
+                }
+                else {      
+            %>
+            <button class="log-in" onclick="buttonClick();">Log out</button>
+            <script>
+            	const buttonClick = () => {
+            		<% request.getSession().removeAttribute("userID"); %>
+            		alert("로그아웃 하였습니다.");
+            		location.reload();
+            	}
+            </script>
+            <%
+                }
+            %>
         </div>
         <div class="menu-btn">
               <span></span>
               <span></span>
               <span></span>
-              <span></span>
+              <span></span>x
         </div>
         <div class="menu-sidebar">
             <a href="#">Home</a>

@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="../resources/styles/signup.css" />
     </head>
 <body>
+    <%!
+        boolean isValidated = false;   
+     %>
     <jsp:include page="../components/header.jsp" />
     <div class="signup-container">
         <div class="signup-box">
@@ -27,12 +30,12 @@
                     </div>
                     
                     <div class="input-wrapper input-wrapper-half">
-                        <input id="userPWD" required type="password" name="userPWD"/> <label for="userPWD">CheckPWD</label>
+                        <input id="userPWDCheck" required type="password" name="userPWDCheck"/> <label for="userPWD">CheckPWD</label>
                     </div>
                 </div>
                 
                 <div class="input-wrapper">
-                    <input id="userName" required name="userName"/> <label for="userName">NAME</label>
+                    <input id="username" required name="username"/> <label for="username">NAME</label>
                 </div>
                 
                 <div class="input-wrapper">
@@ -40,10 +43,29 @@
                 </div>
 
                 <div class="button-wrapper">
-                    <button type="submit">Sign up</button>
+                    <button type="submit" disabled>Sign up</button>
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        document.querySelector(".signup-input-box").addEventListener("change", () => {
+        	if (document.querySelector(".signup-input-box").checkValidity()) {
+        		const password = document.querySelector("#userPWD");
+        		const passwordCheck = document.querySelector("#userPWDCheck");
+        		
+        		if (password.value == passwordCheck.value) {
+        			document.querySelector(".button-wrapper > button").disabled = false;
+        			passwordCheck.classList.remove("invalid");
+        		}
+        		else {
+					passwordCheck.classList.add("invalid");
+        		}
+        	}
+        	else {
+        		document.querySelector(".button-wrapper > button").disabled = true;
+        	}
+        })
+    </script>
 </body>
 </html>

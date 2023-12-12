@@ -6,6 +6,6 @@
     <title>Simple To Do</title>
   </head>
   <body>
-    <jsp:include page="components/header.jsp"/>
+    <jsp:include page="../components/header.jsp"/>
   </body>
 </html>

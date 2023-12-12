@@ -100,7 +100,11 @@ body {
 	transition: background-color 0.3s ease;
 }
 
-.button-wrapper > button:hover {
+.button-wrapper > button:not(:disabled):hover {
   background-color: #0aa5ff;
   color: white;
+}
+
+.button-wrapper > button:disabled {
+	opacity: 0.5;
 }
