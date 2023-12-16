@@ -16,9 +16,9 @@
         <div class="menu">
             <div class="menu-links">
                 <a href="../pages/home.jsp" class="<%= request.getRequestURI().contains("home") ? "now" : "" %>">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Blog</a>
+                <a href="../pages/calendar.jsp" class="<%= request.getRequestURI().contains("calendar") ? "now" : "" %>">Calendar</a>
+                <a href="../pages/management.jsp" class="<%= request.getRequestURI().contains("management") ? "now" : "" %>">Management</a>
+                <a href="../pages/contact.jsp" class="<%= request.getRequestURI().contains("contact") ? "now" : "" %>">Contact</a>
             </div>
             <%
                 if (request.getSession().getAttribute("userID") == null) {
@@ -46,14 +46,14 @@
               <span></span>
               <span></span>
               <span></span>
-              <span></span>x
+              <span></span>
         </div>
         <div class="menu-sidebar">
             <a href="../pages/home.jsp">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Blog</a>
-            <a href="#">Login</a>
+            <a href="../pages/calendar.jsp">Calendar</a>
+            <a href="../pages/management.jsp">Management</a>
+            <a href="../pages/contact.jsp">Contact</a>
+            <a href="../pages/login.jsp">Login</a>
         </div>
     </nav>
     <script src="../resources/scripts/header.js"></script>
