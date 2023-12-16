@@ -11,11 +11,11 @@
     <nav class="navbar">
         <div class="logo">
             <i class="fa-solid fa-list-ol"></i>
-            <a href="main.jsp">Simple ToDo</a>
+            <a href="../pages/home.jsp">Simple ToDo</a>
         </div>
         <div class="menu">
             <div class="menu-links">
-                <a href="#">Home</a>
+                <a href="../pages/home.jsp" class="<%= request.getRequestURI().contains("home") ? "now" : "" %>">Home</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
                 <a href="#">Blog</a>
@@ -49,7 +49,7 @@
               <span></span>x
         </div>
         <div class="menu-sidebar">
-            <a href="#">Home</a>
+            <a href="../pages/home.jsp">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#">Blog</a>

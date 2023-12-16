@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.main-title {
+	margin-top: 10%;
+	margin-bottom: 0;
+	font-size: 4.8em;
+	text-shadow: 5px 5px 10px #9F9F9F;
+	text-align: center;
+	animation-name: initialTitle;
+	animation-duration: 1s;
+	width: 100vw;
+	height: 20%;
+}
+
+.main-content {
+	text-align: center;
+	font-size: 3.6em;
+	opacity: 0.5;
+	animation-name: initialContent;
+	animation-duration: 1s;
+}
+
+
+@keyframes initialTitle {
+	from {
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes initialContent {
+	from {
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 0.5;
+	}
+}

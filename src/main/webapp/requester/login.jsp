@@ -17,7 +17,7 @@
             case 200:
                 session.setAttribute("userID", userID);
                 out.println("<script>alert('로그인 성공');</script>");
-                out.println("<script>location.href='../pages/main.jsp'</script>");
+                out.println("<script>location.href='../pages/home.jsp'</script>");
                 break;
                 
             case 401:
