@@ -10,8 +10,8 @@ public class DBUtils {
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         if (instance == null || instance.isClosed()) {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            username = "";
-            pwd = "";
+            username = "STD";
+            pwd = "STD";
             instance = DriverManager.getConnection("jdbc:mysql://localhost:3306/SimpleToDo?autoReconnect=true&validationQuery=select 1", username, pwd);
         }
 
